@@ -1,0 +1,178 @@
+#:kivy 2.0.0
+
+<Main>:
+    BoxLayout:
+        size_hint_x: 2
+        TabbedPanel:
+            size_hint: 1,1
+            do_default_tab: False
+
+            TabbedPanelItem:
+                text: 'Dec'
+
+                BoxLayout:
+                    orientation: 'vertical'
+
+                    GridLayout:
+                        cols: 2
+                        row_force_default: True
+                        row_default_height: self.height * 2 / len(self.children)
+
+
+                        TextInput:
+                            id: input_dec_bin
+                            hint_text: 'Dec to Bin'
+
+                        Label:
+                            id: label_dec_bin
+                            text: 'Result'
+
+                        TextInput:
+                            id: input_dec_hex
+                            hint_text: 'Dec to Hex'
+                        Label:
+                            id: label_dec_hex
+                            text: 'Result'
+
+                        TextInput:
+                            id: input_dec_oct
+                            hint_text: 'Dec to Oct'
+                        Label:
+                            id: label_dec_oct
+                            text: 'Result'
+
+            TabbedPanelItem:
+                text: 'Bin'
+
+                BoxLayout:
+                    orientation: 'vertical'
+
+                    GridLayout:
+                        cols: 2
+                        row_force_default: True
+                        row_default_height: self.height * 2 / len(self.children)
+
+
+                        TextInput:
+                            id: input_bin_dec
+                            hint_text: 'Bin to Dec'
+                        Label:
+                            id: label_bin_dec
+                            text: 'Result'
+
+                        TextInput:
+                            id: input_bin_hex
+                            hint_text: 'Bin to Hex'
+                        Label:
+                            id: label_bin_hex
+                            text: 'Result'
+
+                        TextInput:
+                            id: input_bin_oct
+                            hint_text: 'Bin to Oct'
+                        Label:
+                            id: label_bin_oct
+                            text: 'Result'
+
+            TabbedPanelItem:
+                text: 'Hex'
+
+                BoxLayout:
+                    orientation: 'vertical'
+
+                    GridLayout:
+                        cols: 2
+                        row_force_default: True
+                        row_default_height: self.height * 2 / len(self.children)
+
+
+                        TextInput:
+                            id: input_hex_dec
+                            hint_text: 'Hex to Dec'
+                        Label:
+                            id: label_hex_dec
+                            text: 'Result'
+
+                        TextInput:
+                            id: input_hex_bin
+                            hint_text: 'Hex to Bin'
+                        Label:
+                            id: label_hex_bin
+                            text: 'Result'
+
+                        TextInput:
+                            id: input_hex_oct
+                            hint_text: 'Hex to Oct'
+                        Label:
+                            id: label_hex_oct
+                            text: 'Result'
+
+            TabbedPanelItem:
+                text: 'Oct'
+
+                BoxLayout:
+                    orientation: 'vertical'
+
+                    GridLayout:
+                        cols: 2
+                        row_force_default: True
+                        row_default_height: self.height * 2 / len(self.children)
+
+
+                        TextInput:
+                            id: input_oct_dec
+                            hint_text: 'Oct to Dec'
+                        Label:
+                            id: label_oct_dec
+                            text: 'Result'
+
+                        TextInput:
+                            id: input_oct_bin
+                            hint_text: 'Oct to Bin'
+                        Label:
+                            id: label_oct_bin
+                            text: 'Result'
+
+                        TextInput:
+                            id: input_oct_hex
+                            hint_text: 'Oct to Hex'
+                        Label:
+                            id: label_oct_hex
+                            text: 'Result'
+
+            TabbedPanelItem:
+                text: 'Ascii'
+                BoxLayout:
+                    orientation: 'vertical'
+
+                    GridLayout:
+                        cols: 2
+                        row_force_default: True
+                        row_default_height: self.height * 2 / len(self.children)
+
+                        TextInput:
+                            id: input_ascii_dec
+                            hint_text: 'Ascii to Dec'
+                        Label:
+                            id: label_ascii_dec
+                            text: 'Result'
+
+                        TextInput:
+                            id: input_dec_ascii
+                            hint_text: 'Dec to Ascii'
+                        Label:
+                            id: label_dec_ascii
+                            text: 'Result'
+
+
+    BoxLayout:
+        size_hint_x: 1
+        orientation: 'vertical'
+
+        Button:
+            text: 'Compute'
+            on_press: root.compute()
+
+        Button:
+            text: 'Clear'
+            on_press: root.clear()
